@@ -3,9 +3,6 @@ import Header from "../components/Header";
 import Watch from "../components/Watch";
 import { useState,useEffect } from "react";
 import { myContext } from "../Contexts/mycontext";
-import { components } from "react-select";
-import { songsdata } from "../components/Audios";
-import { AudioHTMLAttributes } from "react";
 
 
 function MyApp({ Component, pageProps }) {
