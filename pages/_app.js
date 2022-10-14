@@ -15,7 +15,9 @@ function MyApp({ Component, pageProps }) {
   const [curentTime, setCurentTime] = useState('');
   const [Allalarms, setAllalarms] = useState([]);
   const [isplaying, setisplaying] = useState(false);
-  const [song,setsong] = useState(null)
+  const [song,setsong] = useState(null);
+  const [currentAlarmName,setCurrentAlarmname] = useState('');
+  const [currentAlarmTime,setCurrentAlarmTime] = useState('');
 
   useEffect(() => {
     setsong({audio: new Audio("/Songs/1.mp3")})
@@ -65,6 +67,8 @@ function MyApp({ Component, pageProps }) {
         console.log("its alarm time");
         alarmSound();
         setalarmState(elem.id);
+        setCurrentAlarmname(elem.AlarmName);
+        setCurrentAlarmTime(time);
         return;
       }
       return elem;
@@ -89,6 +93,8 @@ function MyApp({ Component, pageProps }) {
           setalarmState,
           alarmSound,
           song,
+          currentAlarmName,
+          currentAlarmTime
         }}
       >
         <Header />

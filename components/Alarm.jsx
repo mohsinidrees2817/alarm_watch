@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { myContext } from "../Contexts/mycontext";
 
 const Alarm = () => {
-  const {setNewAlarm, Allalarms,setAllalarms,setalarmState } = useContext(myContext);
+  const {setNewAlarm, Allalarms,setAllalarms,setalarmState,newAlarm,isplaying } = useContext(myContext);
 
 
 
@@ -27,10 +27,10 @@ const Alarm = () => {
   }
 
   return (
-    <div className="w-full border-2 rounded-lg">
+    <div className={`w-full border-2 rounded-lg max-w-[600px] ${ !newAlarm ? 'blur-none' : 'blur-sm'} ${ !isplaying ? 'blur-none' : 'blur-sm'}`}>
       <div className="flex justify-between text-xl font-semibold w-full p-4 border-b-2  ">
         <p>Alarm</p>
-        <p className="">+</p>
+        <p onClick={()=>setNewAlarm(true)} className="cursor-pointer">+</p>
       </div>
       <div className="w-full">
         {Allalarms?.length > 0 ? (

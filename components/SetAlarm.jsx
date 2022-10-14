@@ -57,14 +57,14 @@ const SetAlarm = () => {
 
 
   return (
-    <div className="w-full flex flex-col justify-center gap-4 items-center  bg-white shadow-md">
+    <div className="w-full  flex flex-col justify-center gap-4 items-center  bg-white shadow-md ">
       <div className="bg-[#0090dd] flex justify-between items-center w-full  px-2 py-4 text-white ">
         <p className="text-xl  font-normal">Set Alarm</p>
         <p className="cursor-pointer" onClick={()=>setNewAlarm(false)}>X</p>
       </div>
       <div className="flex flex-col justify-center items-center">
         <p>Alarm Title</p>
-      <input type="text" className="border-2 border-[#8d8d8d] rounded"  onChange={(e)=>setAlarmname(e.target.value)}/>
+      <input type="text" className="border-2 border-[#555555] rounded p-[2px]" placeholder="Alarm"  onChange={(e)=>setAlarmname(e.target.value)}/>
       </div>
       <div className="flex flex-wrap gap-12 py-4 justify-center items-center ">
         <div className="flex flex-col justify-center items-center">
