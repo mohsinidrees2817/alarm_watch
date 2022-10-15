@@ -16,8 +16,8 @@ const Alarm = () => {
 
   return (
     <div className={`w-full border border-[#555555] rounded-md max-w-[400px] ${ !newAlarm ? 'blur-none' : 'blur-sm'} ${ !isplaying ? 'blur-none' : 'blur-sm'}`}>
-      <div className="flex justify-center text-normal items-center font-semibold  w-full p-2 border-b border-[#666680] shadow-sm shadow-white ">
-        <p className="text-[#555555]">All Alarms</p>
+      <div className="flex justify-center text-normal bg-[#555555] items-center font-semibold  w-full p-2 border-b border-[#666680] shadow-sm shadow-white ">
+        <p className="text-white">All Alarms</p>
         {/* <p onClick={()=>setNewAlarm(true)} className="cursor-pointer">+</p> */}
       </div>
       <div className="w-full ">
@@ -26,7 +26,7 @@ const Alarm = () => {
             {Allalarms?.map((item, index) => {
               return (
                 <div
-                  className="flex justify-between items-center text-xl font-semibold w-full py-2 px-4 border-b border-2 border-[#f1f1f1] bg-gray-100"
+                  className="flex justify-between items-center text-xl font-semibold w-full py-2 px-4 border-b border-2 border-[#f1f1f1]"
                   key={index}
                 >
                   <div className="flex flex-col">
